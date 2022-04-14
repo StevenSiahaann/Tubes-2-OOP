@@ -1,4 +1,8 @@
-class Karakter extends Kartu{
+package Card.Karakter;
+
+import Card.Kartu;
+
+public class Karakter extends Kartu{
     private String jenis="Karakter";
     private double attack;
     private double health;
@@ -15,7 +19,7 @@ class Karakter extends Kartu{
     }
     @Override //gaperlu jg gapapa sebenernya
     //mo ngetest doang
-    void display(){
+    public void display(){
         super.display();
         System.out.println(this.jenis);
         System.out.println(this.mana);

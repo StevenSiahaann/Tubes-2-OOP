@@ -1,3 +1,5 @@
+package Card.Karakter;
+
 public class Nether extends Karakter{
     String Type="Nether";
 

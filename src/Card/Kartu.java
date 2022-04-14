@@ -1,4 +1,6 @@
-class Kartu {
+package Card;
+
+public class Kartu {
     private String ID;
     private String Nama;
     private String Desc;
@@ -19,7 +21,7 @@ class Kartu {
         this.imagepath=imagepath;
     }
     //buat ngetest doang
-    void display(){
+    public void display(){
         System.out.println(this.ID);
         System.out.println(this.Nama);
         System.out.println(this.Desc);

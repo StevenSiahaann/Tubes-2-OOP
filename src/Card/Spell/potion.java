@@ -1,3 +1,4 @@
+package Card.Spell;
 class potion extends spell{ //temp
     private String Type="TEMP";
     private double att;

@@ -1,3 +1,4 @@
+package Card.Spell;
 class morph extends spell{//perm
     private String Type="PERM";
     private String targetId;

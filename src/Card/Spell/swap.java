@@ -1,3 +1,4 @@
+package Card.Spell;
 class swap extends   spell{ //perm
     private String Type="PERM";
     private int duration;

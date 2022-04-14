@@ -1,3 +1,6 @@
+package Card.Spell;
+import Card.Kartu;
+
 class spell extends Kartu{
     private String jenis="Spell";
     private double mana;

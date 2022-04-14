@@ -1,3 +1,5 @@
+package Card.Karakter;
+
 public class End extends Karakter {
     private String Type="End";
 
