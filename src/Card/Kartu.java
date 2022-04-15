@@ -5,20 +5,21 @@ public class Kartu {
     private String Nama;
     private String Desc;
     private String imagepath;
-    // public int row; //buat si tempat kartunya?
-    // public int col;//buat si tempat kartunya?
+    private String jenis;
 
     public Kartu(){
         this.ID="0";
         this.Nama="";
         this.Desc="";
         this.imagepath="";
+        this.jenis="None";
     }
-    public Kartu(String ID,String Nama, String Desc , String imagepath){
+    public Kartu(String ID,String Nama, String Desc , String imagepath, String jenis){
         this.ID=ID;
         this.Nama= Nama;
         this.Desc= Desc;
         this.imagepath=imagepath;
+        this.jenis=jenis;
     }
     //buat ngetest doang
     public void display(){
@@ -40,5 +41,8 @@ public class Kartu {
     }
     public String getDesc(){
         return this.Desc;
+    }
+    public String getJenis(){
+        return this.jenis;
     }
 }

@@ -3,14 +3,14 @@ package Card.Karakter;
 import Card.Kartu;
 
 public class Karakter extends Kartu{
-    private String jenis="Karakter";
     private double attack;
     private double health;
     private double mana;
     private double attackup;
     private double healthup;
-    public Karakter(String ID,String Nama,String Desc,String imagepath,double attack,double health,int mana,double attackup,double healthup){
-        super(ID, Nama, Desc, imagepath);
+    public Karakter(String ID,String Nama,String Desc,String imagepath,double attack,double health,int mana,double attackup,double healthup,String Type){
+        super(ID, Nama, Desc, imagepath,"Karakter");
+        this.Type=Type;
         this.attack=attack;
         this.health=health;
         this.mana=mana;
@@ -21,7 +21,6 @@ public class Karakter extends Kartu{
     //mo ngetest doang
     public void display(){
         super.display();
-        System.out.println(this.jenis);
         System.out.println(this.mana);
         System.out.println(this.attack);
         System.out.println(this.health);
@@ -44,9 +43,6 @@ public class Karakter extends Kartu{
     }
     public double getHealthUp(){
         return this.health;
-    }
-    public String getJenis(){
-        return this.jenis;
     }
     //setter
     public void setAtt(double att){

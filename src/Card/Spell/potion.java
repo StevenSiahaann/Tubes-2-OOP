@@ -1,20 +1,16 @@
 package Card.Spell;
 class potion extends spell{ //temp
-    private String Type="TEMP";
     private double att;
     private double hp;
     private int duration;
 
     public potion(String ID,String Nama,String Desc,String imagepath,double mana,double att,double hp,int duration){
-        super(ID, Nama, Desc, imagepath, mana);
+        super(ID, Nama, Desc, imagepath, mana,"TEMP");
         this.att=att;
         this.hp=hp;
         this.duration=duration;
     }
     //getter
-    public String getType(){
-        return this.Type;
-    }
     public double getAtt(){
         return this.att;
     }
