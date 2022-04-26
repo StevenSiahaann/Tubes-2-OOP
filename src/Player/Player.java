@@ -1,5 +1,7 @@
 package Player;
 import Card.Karakter.Karakter;
+import Deck;
+import Hand;
 import java.util.*;
 
 public class Player {
@@ -66,15 +68,25 @@ public class Player {
     public double getMana_remains(){
         return this.mana_remains;
     }
-    /*
+    
+    /**
+     * This method returns the deck of a player.
+     *
+     * @return The deck of a player.
+     */
     public Deck getDeck(){
-        return this.Deck;
+        return this.deck;
     }
+    
+    /**
+     * This method returns the hand card of a player.
+     *
+     * @return The hand card of a player.
+     */
     public HandCard getHand_card(){
         return this.hand_card;
     }
-     */
-
+    
     /**
      * This method sets the name of a player.
      *
