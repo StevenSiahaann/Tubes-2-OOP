@@ -1,11 +1,39 @@
 package Battle;
 import Player;
-import Card;
+import Deck;
+import Field;
 
 public class Battle {
-    // no attributes -- only controls the game
+    private Deck deck;
+    private int turn;
+
     public Battle() {
         // empty constructor, no attribute
+    }
+
+    /**
+     * This method returns the turn number of the battle.
+     *
+     * @return The turn number of the battle.
+     */
+    public int getTurn() {
+        return this.turn;
+    }
+
+    /**
+     * This method sets the turn number of the battle.
+     *
+     * @param turn Integer representing the turn number to be set.
+     */
+    public void setTurn(int turn) {
+        this.turn = turn;
+    }
+
+    /**
+     * This method increments the turn number of the battle.
+     */
+    public void nextTurn() {
+        this.turn++;
     }
 
     /**
