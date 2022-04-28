@@ -48,8 +48,24 @@ public class Battle {
      * @param
      * @return
      */
-    public void phaseDraw() {
+    public void phaseDraw(Player player) {
+        List<Kartu> choice;
+        Hand playerHand = player.getHand();
 
+        for (int counter = 0; counter < 3; counter++) {
+            choice.add(deck.getDeckCard());
+        }
+        // prompt player to pick a card, and then...
+        playerHand.addHandCard(choice.remove(0)); // player picks card
+        for (int counter = 0; counter < choice.size(); counter++) {
+            deck.addDeckCard(choice.remove(0));
+        }
+        deck.shuffleDeck();
+        if (playerHand.gethandCardTotal() > 5) {
+            // prompt player to pick a card, and then...
+            playerHand.removeHandCard();
+        }
+        player.setMana_remains(Math.min(10, getTurn()));
     }
 
     /**
