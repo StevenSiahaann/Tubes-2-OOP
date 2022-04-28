@@ -82,7 +82,16 @@ public class Battle {
      * @return
      */
     public void phasePlanning() {
-
+        /* This will depend on the Field class.
+         * Prompt what the player wants to do.
+         * If player wants to deploy a card, check if:
+         * there are empty spaces in the field (character), or
+         * there are characters in the field (spell).
+         * If there are available slots, prompt the player...
+         * ...where to place the card, and put the card there.
+         * Player may also remove cards on hand, or chars on board.
+         * Game will proceed when player confirms.
+         */
     }
 
     /**
