@@ -35,6 +35,82 @@ public class Battle {
     }
 
     /**
+     * This method displays cards in a list.
+     */
+    public void listCards(List<Kartu> cardList) {
+        int cardListSize = cardList.size();
+        for (int counter = 0; counter < cardListSize; counter++) {
+            System.out.print(counter + ". ");
+            String drawnCardName = drawnCard.getName();
+            System.out.print(drawnCardName);
+            if (drawnCard.getJenis().equals("Karakter")) {
+                System.out.print(" (Karakter: ");
+                Karakter drawnCardKarakter = (Karakter) drawnCard;
+                String drawnCardKarType = drawnCardKarakter.getType();
+                System.out.println(drawnCardKarType + ")");
+                double drawnCardKarMana = drawnCardKarakter.getMana();
+                double drawnCardKarAtt = drawnCardKarakter.getAtt();
+                double drawnCardKarAttUp = drawnCardKarakter.getAttUp();
+                double drawnCardKarHP = drawnCardKarakter.getHealth();
+                double drawnCardKarHPUp = drawnCardKarakter.getHealthUp();
+                System.out.println("Req. mana: " + drawnCardKarakterMana);
+                System.out.println("ATK: " + drawnCardKarAtt + " (+" + drawnCardKarAttUp + ")");
+                System.out.println("HP: " + drawnCardKarHP + " (+" + drawnCardKarHPUp + ")");
+            }
+            else if (drawnCard.getJenis().equals("Spell")) {
+                System.out.print(" (Spell: ");
+                Spell drawnCardSpell = (Spell) drawnCard;
+                String drawnCardSpellType = drawnCardSpell.getType();
+                System.out.println(drawnCardSpellType + ")");
+                if (drawnCardSpellType.equals("Morph")) {
+                    Morph drawnCardMorph = (Morph) drawnCardSpell;
+                    // method to print out card details
+                }
+                else if (drawnCardSpellType.equals("Potion")) {
+                    Potion drawnCardPotion = (Potion) drawnCardSpell;
+                    double drawnCardPotionAtt = drawnCardPotion.getAtt();
+                    double drawnCardPotionHP = drawnCardPotion.hp();
+                    int drawnCardPotionDur = drawnCardPotion.duration();
+                    if (drawnCardPotionAtt > 0) {
+                        System.out.println("ATK: +" + drawnCardPotionAtt);
+                    }
+                    else {
+                        System.out.println("ATK: " + drawnCardPotionAtt);
+                    }
+                    if (drawnCardPotionHP > 0) {
+                        System.out.println("HP: +" + drawnCardPotionHP);
+                    }
+                    else {
+                        System.out.println("HP: " + drawnCardPotionHP);
+                    }
+                    System.out.println("Duration: " + drawnCardPotionDur);
+                }
+                else if (drawnCardSpellType.equals("Level")) {
+                    // Level drawnCardLevel = (Level) drawnCardSpell;
+                    // method to print out card details
+                }
+                else if (drawnCardSpellType.equals("Swap")) {
+                    Swap drawnCardSwap = (Swap) drawnCardSpell;
+                    int drawnCardSwapDur = drawnCardSwap.duration();
+                    System.out.println("Duration: " + drawnCardSwapDur);
+                }
+                double drawnCardSpellMana = drawnCardSpell.getMana()
+                System.out.println("Req. mana: ", drawnCardSpellMana);
+            }
+            String drawnCardDesc = drawnCard.getDesc();
+            System.out.println("Desc: " + drawnCardDesc);
+        }
+    }
+
+    /**
+     * This method displays cards in a hand.
+     */
+    public void listCardsInHand(Hand hand) {
+        List<Kartu> ListKartuHand = hand.getHand();
+        listCards(ListKartuHand);
+    }
+
+    /**
      * This method represents the draw phase.
      * <p>
      * In this phase, player draws 3 cards from deck.
