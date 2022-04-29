@@ -8,6 +8,21 @@ public class Karakter extends Kartu{
     private double mana;
     private double attackup;
     private double healthup;
+
+    /**
+     * Class constructor for character cards.
+     *
+     * @param ID ID for new character card objects
+     * @param Nama Name for new character card objects
+     * @param Desc Description for new character card object
+     * @param imagepath Relative path to image of character card
+     * @param attack Attack value of character card
+     * @param health HP value of character card
+     * @param mana Mana value of character card
+     * @param attackup Attack upgrade for character card
+     * @param healthup HP upgrade for character card
+     * @param Type Type of character ("End", "Nether", "Overworld")
+     */
     public Karakter(String ID,String Nama,String Desc,String imagepath,double attack,double health,int mana,double attackup,double healthup,String Type){
         super(ID, Nama, Desc, imagepath,"Karakter");
         this.Type=Type;
@@ -31,7 +46,7 @@ public class Karakter extends Kartu{
     /**
      * This method returns the attack value of a character.
      *
-     * @return The attack value of a character.
+     * @return The attack value of a character
      */
     public double getAtt(){
         return this.attack;
@@ -40,7 +55,7 @@ public class Karakter extends Kartu{
     /**
      * This method returns the HP of a character.
      *
-     * @return The HP of a character.
+     * @return The HP of a character
      */
     public double getHealth(){
         return this.health;
@@ -49,7 +64,7 @@ public class Karakter extends Kartu{
     /**
      * This method returns the required mana of a character.
      *
-     * @return The required mana of a character.
+     * @return The required mana of a character
      */
     public double getMana(){
         return this.mana;
@@ -58,7 +73,7 @@ public class Karakter extends Kartu{
     /**
      * This method returns the attack upgrade of a character.
      *
-     * @return The attack upgrade of a character.
+     * @return The attack upgrade of a character
      */
     public double getAttUp(){
         return this.attack;
@@ -67,7 +82,7 @@ public class Karakter extends Kartu{
     /**
      * This method returns the HP upgrade of a character.
      *
-     * @return The HP upgrade of a character.
+     * @return The HP upgrade of a character
      */
     public double getHealthUp(){
         return this.health;
@@ -76,7 +91,7 @@ public class Karakter extends Kartu{
     /**
      * This method sets the attack value of a character.
      *
-     * @param att The attack value to be set in a character.
+     * @param att The attack value to be set in a character
      */
     public void setAtt(double att){
         this.attack=att;
@@ -85,7 +100,7 @@ public class Karakter extends Kartu{
     /**
      * This method sets the HP value of a character.
      *
-     * @param health The HP value to be set in a character.
+     * @param health The HP value to be set in a character
      */
     public void setHealth(double health){
         this.health=health;
@@ -94,7 +109,7 @@ public class Karakter extends Kartu{
     /**
      * This method sets the mana value of a character.
      *
-     * @param mana The mana value to be set in a character.
+     * @param mana The mana value to be set in a character
      */
     public void setMana(double mana){
         this.mana=mana;
@@ -103,7 +118,7 @@ public class Karakter extends Kartu{
     /**
      * This method sets the attack upgrade of a character.
      *
-     * @param attUp The attack upgrade to be set in a character.
+     * @param attUp The attack upgrade to be set in a character
      */
     public void setAttUp(double attUp){
         this.attackup=attUp;
@@ -112,7 +127,7 @@ public class Karakter extends Kartu{
     /**
      * This method sets the HP upgrade of a character.
      *
-     * @param healthUp The HP upgrade to be set in a character.
+     * @param healthUp The HP upgrade to be set in a character
      */
     public void setHealthUp(double healthUp){
         this.healthup=healthUp;
