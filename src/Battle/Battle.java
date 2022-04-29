@@ -1,14 +1,12 @@
 package Battle;
 import Player;
-import Deck;
 import Field;
 
 public class Battle {
-    private Deck deck;
     private int turn;
 
     public Battle() {
-        // empty constructor, no attribute
+        this.turn = 0;
     }
 
     /**
