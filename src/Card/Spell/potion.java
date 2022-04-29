@@ -5,7 +5,7 @@ class potion extends spell{ //temp
     private int duration;
 
     public potion(String ID,String Nama,String Desc,String imagepath,double mana,double att,double hp,int duration){
-        super(ID, Nama, Desc, imagepath, mana,"TEMP");
+        super(ID, Nama, Desc, imagepath, mana, "Potion", false);
         this.att=att;
         this.hp=hp;
         this.duration=duration;
