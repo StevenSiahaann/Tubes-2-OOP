@@ -125,19 +125,31 @@ public class Battle {
     public void phaseDraw(Player player) {
         List<Kartu> choice;
         Hand playerHand = player.getHand();
+        Deck playerDeck = player.getDeck();
+        Scanner scanner = new Scanner(System.in);
 
         for (int counter = 0; counter < 3; counter++) {
-            choice.add(deck.getDeckCard());
+            Kartu drawnCard = playerDeck.getDeckCard();
+            choice.add(drawnCard);
         }
-        // prompt player to pick a card, and then...
-        playerHand.addHandCard(choice.remove(0)); // player picks card
+        System.out.println("Cards drawn from deck:")
+        listCards(choice);
+        System.out.print("Pick a card to keep in hand: ");
+        int pickedCard = scanner.nextInt();
+        while ((pickedCard < 0) || (pickedCard >= choice.size())) {
+            System.out.print("Invalid input. Enter again: ");
+            pickedCard = scanner.nextInt();
+        }
+        playerHand.addHandCard(choice.remove(pickedCard));
         for (int counter = 0; counter < choice.size(); counter++) {
-            deck.addDeckCard(choice.remove(0));
+            playerDeck.addDeckCard(choice.remove(0));
         }
         deck.shuffleDeck();
         if (playerHand.gethandCardTotal() > 5) {
-            // prompt player to pick a card, and then...
-            playerHand.removeHandCard();
+            listCards(playerHand);
+            System.out.print("Choose a card to discard: ");
+            int cardToDiscard = scanner.nextInt();
+            playerHand.removeHandCard(cardToDiscard);
         }
         player.setMana_remains(Math.min(10, getTurn()));
     }
