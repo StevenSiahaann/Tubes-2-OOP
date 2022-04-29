@@ -41,7 +41,7 @@ public class Hand {
 
     public Kartu getCard(){ // return card
         Kartu card = this.hand.get(0);
-        this.hand.removeHandCard(card);
+        this.hand.remove(card);
         this.handCardTotal--;
         return card;
     }
@@ -49,7 +49,7 @@ public class Hand {
     public List<Kartu> getHand(int n){ // return n cards
         List<Kartu> hand = new ArrayList<Kartu>();
         for(int i = 0; i < n; i++){
-            hand.addHandCard(this.hand.get(i));
+            hand.add(this.hand.get(i));
         }
         return hand;
     }
