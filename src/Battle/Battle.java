@@ -95,7 +95,7 @@ public class Battle {
                     System.out.println("Duration: " + drawnCardSwapDur);
                 }
                 double drawnCardSpellMana = drawnCardSpell.getMana()
-                System.out.println("Req. mana: ", drawnCardSpellMana);
+                System.out.println("Req. mana: " + drawnCardSpellMana);
             }
             String drawnCardDesc = drawnCard.getDesc();
             System.out.println("Desc: " + drawnCardDesc);
