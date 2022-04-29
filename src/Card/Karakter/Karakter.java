@@ -28,35 +28,92 @@ public class Karakter extends Kartu{
         System.out.println(this.healthup);
     }
 
-    //getter
+    /**
+     * This method returns the attack value of a character.
+     *
+     * @return The attack value of a character.
+     */
     public double getAtt(){
         return this.attack;
     }
+
+    /**
+     * This method returns the HP of a character.
+     *
+     * @return The HP of a character.
+     */
     public double getHealth(){
         return this.health;
     }
+
+    /**
+     * This method returns the required mana of a character.
+     *
+     * @return The required mana of a character.
+     */
     public double getMana(){
         return this.mana;
     }
+
+    /**
+     * This method returns the attack upgrade of a character.
+     *
+     * @return The attack upgrade of a character.
+     */
     public double getAttUp(){
         return this.attack;
     }
+
+    /**
+     * This method returns the HP upgrade of a character.
+     *
+     * @return The HP upgrade of a character.
+     */
     public double getHealthUp(){
         return this.health;
     }
-    //setter
+
+    /**
+     * This method sets the attack value of a character.
+     *
+     * @param att The attack value to be set in a character.
+     */
     public void setAtt(double att){
         this.attack=att;
     }
+
+    /**
+     * This method sets the HP value of a character.
+     *
+     * @param health The HP value to be set in a character.
+     */
     public void setHealth(double health){
         this.health=health;
     }
+
+    /**
+     * This method sets the mana value of a character.
+     *
+     * @param mana The mana value to be set in a character.
+     */
     public void setMana(double mana){
         this.mana=mana;
     }
+
+    /**
+     * This method sets the attack upgrade of a character.
+     *
+     * @param attUp The attack upgrade to be set in a character.
+     */
     public void setAttUp(double attUp){
         this.attackup=attUp;
     }
+
+    /**
+     * This method sets the HP upgrade of a character.
+     *
+     * @param healthUp The HP upgrade to be set in a character.
+     */
     public void setHealthUp(double healthUp){
         this.healthup=healthUp;
     }
