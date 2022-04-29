@@ -39,8 +39,13 @@ public class Deck {
     public List<Kartu> getDeck(){ //return deck
         return this.deck;
     }
+    
+    public void removeDeckCard(Kartu card){ // remove card from deck
+        this.deck.remove(card);
+        this.deckCardTotal--;
+    }
 
-    public shuffleDeck(){ //shuffle deck
+    public void shuffleDeck(){ //shuffle deck
         Collections.shuffle(this.deck);
     }
 
@@ -51,23 +56,9 @@ public class Deck {
 
     public Kartu getDeckCard(){ // return card
         Kartu card = this.deck.get(0);
-        this.deck.removeDeckCard(card);
+        this.deck.remove(0);
         this.deckCardTotal--;
         return card;
     }
 
-    public List<Kartu> getDeck(int n){ // return n cards
-        List<Kartu> deck = new ArrayList<Kartu>();
-        for(int i=0; i<n; i++){
-            Kartu card = this.deck.get(0);
-            deck.addCard(card);
-            this.deck.removeDeckCard(card);
-        }
-        return deck;
-    }
-
-    public void removeDeckCard(Kartu card){ // remove card from deck
-        this.deck.remove(card);
-        this.deckCardTotal--;
-    }
 }
